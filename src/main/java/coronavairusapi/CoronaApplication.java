@@ -1,4 +1,4 @@
-package coronavairusapi.corona;
+package coronavairusapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

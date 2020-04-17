@@ -1,4 +1,4 @@
-package coronavairusapi.corona.models;
+package coronavairusapi.models;
 
 public enum Status {
 

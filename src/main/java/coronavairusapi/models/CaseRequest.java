@@ -1,4 +1,4 @@
-package coronavairusapi.corona.models;
+package coronavairusapi.models;
 
 import javax.persistence.*;
 import java.io.Serializable;

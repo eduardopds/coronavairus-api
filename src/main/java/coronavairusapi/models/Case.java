@@ -1,8 +1,6 @@
-package coronavairusapi.corona.models;
+package coronavairusapi.models;
 
 import java.io.Serializable;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 import javax.persistence.*;
@@ -44,6 +42,8 @@ public class Case implements Serializable {
     private Status status;
 
     private LocalDate updated;
+
+    private LocalDate created;
 
     public Case() {
 
@@ -118,17 +118,32 @@ public class Case implements Serializable {
         return updated;
     }
 
+    public LocalDate getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDate created) {
+        this.created = created;
+    }
+
     public void setUpdated(LocalDate updated) {
         this.updated = updated;
     }
 
-    @PrePersist
     @PreUpdate
     private void updateData(){
 
         this.updated = LocalDate.now();
 
     }
+
+    @PrePersist
+    private void createData(){
+
+        this.created = LocalDate.now();
+
+    }
+
 
     @Override
     public boolean equals(Object o) {

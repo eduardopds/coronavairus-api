@@ -1,4 +1,4 @@
-package coronavairusapi.corona;
+package coronavairusapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
