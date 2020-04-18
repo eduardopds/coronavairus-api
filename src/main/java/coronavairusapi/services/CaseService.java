@@ -7,6 +7,7 @@ import coronavairusapi.models.Status;
 import coronavairusapi.repositories.CaseRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,7 +29,9 @@ public class CaseService {
         return this.caseRepository.getStatistics(status);
     }
 
+    public List<Case> getAll() {
 
-
+        return this.caseRepository.findAll();
+    }
 
 }

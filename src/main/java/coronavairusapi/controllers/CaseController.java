@@ -26,6 +26,14 @@ public class CaseController {
         return ResponseEntity.status(HttpStatus.CREATED).body(caseAux);
 
     }
+    
+    @GetMapping
+    public ResponseEntity<List<Case>> getAll (){
+        List<Case> response = this.caseService.getAll();
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+
+    }
+
     @GetMapping("/statistics/")
     public ResponseEntity<List<CasesStatistics>> getByStatistics (@RequestParam Status status){
         List<CasesStatistics> response = this.caseService.getStatistics(status);
