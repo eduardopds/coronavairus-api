@@ -2,6 +2,6 @@ package coronavairusapi.models;
 
 public enum Status {
 
-    RECOVERED, DEAD, POSITIVE;
+    Recuperado, Morto, Positivo;
 
 }

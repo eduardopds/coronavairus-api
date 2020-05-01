@@ -34,6 +34,24 @@ public class CaseController {
 
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Case> getById (@PathVariable("id") Long id){
+        Case response = this.caseService.getById(id);
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Case> deleteById (@PathVariable("id") Long id){
+        return this.caseService.deleteById(id);
+    }
+
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Case> updateById (@PathVariable("id") Long id, @RequestBody Case caseAux){
+        return this.caseService.update(id,caseAux);
+    }
+
     @GetMapping("/statistics/")
     public ResponseEntity<List<CasesStatistics>> getByStatistics (@RequestParam Status status){
         List<CasesStatistics> response = this.caseService.getStatistics(status);
