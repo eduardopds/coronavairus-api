@@ -1,4 +1,4 @@
 # Coronavairus API
 
-* Api feita em springboot para cadastro de casos da COVID-19
+* Api feita em springboot para cadastro de casos de COVID-19.
 
